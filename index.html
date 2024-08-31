@@ -12,18 +12,44 @@
     <h3>自作スライダー　サンプル ver2</h3>
 
     <p id="text1">スライダー出力値　x:0.5, y:0.5</p>
-    <canvas id="canvas1" width="300px" height="300px"></canvas>
+    <canvas id="canvas1"></canvas>
 
     <div style="height:30px"></div>
 
     
     <p id="text2">スライダー出力値</p>
-    <canvas id="canvas2" width="300px" height="100px"></canvas>
+    <canvas id="canvas2"></canvas>
+
+    <div style="height:30px"></div>
+    <input type="range" id="slider1" min='0' max='1' step='0.01' value='0' style="width:min(90%,350px); margin-left:min(5%,30px); margin-right:30px">
+
 
     <div style="height:30px"></div>
 
     <p id="text3">スライダー出力値（ラジアン）</p>
-    <canvas id="canvas3" width="300px" height="300px"></canvas>
+    <canvas id="canvas3"></canvas>
+
+    <script>
+      let canvas1 = document.getElementById('canvas1');
+      let canvas2 = document.getElementById('canvas2');
+      let canvas3 = document.getElementById('canvas3');
+      let size = Math.min(300, window.innerWidth);
+      let size2 = Math.min(400, window.innerWidth);
+      canvas1.width = size * window.devicePixelRatio;
+      canvas1.height = size * window.devicePixelRatio;
+      canvas1.style.width = size;
+      canvas1.style.height = size;
+      canvas2.width = size2 * window.devicePixelRatio;
+      canvas2.height = size2 * window.devicePixelRatio * 0.3;
+      canvas2.style.width = size2;
+      canvas2.style.height = size2 * 0.3;
+      canvas3.width = size * window.devicePixelRatio;
+      canvas3.height = size * window.devicePixelRatio;
+      canvas3.style.width = size;
+      canvas3.style.height = size;
+    </script>
+
+    
 
     <script src='script1.js'></script>
 

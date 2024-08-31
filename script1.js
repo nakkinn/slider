@@ -4,7 +4,7 @@ class Slider2d{
     constructor(id, func){
 
         this.element = document.getElementById(id);
-        this.elementpos = this.element.getBoundingClientRect();
+
         this.margin = 8;
         this.width = this.element.width;
         this.height = this.element.height;
@@ -54,11 +54,11 @@ class Slider2d{
         let x,y;
 
         if(event.touches){
-            x = event.touches[0].clientX - this.elementpos.left;
-            y = event.touches[0].clientY - this.elementpos.top;
+            x = event.touches[0].clientX - this.element.getBoundingClientRect().left;
+            y = event.touches[0].clientY - this.element.getBoundingClientRect().top;
         }else{
-            x = event.clientX - this.elementpos.left;
-            y = event.clientY - this.elementpos.top;
+            x = event.clientX - this.element.getBoundingClientRect().left;
+            y = event.clientY - this.element.getBoundingClientRect().top;
         }
     
         if(this.mx!=-1 && this.my!=-1 && this.mouseIsPressed){
@@ -89,7 +89,7 @@ class Slider1d{
     constructor(id, func){
 
         this.element = document.getElementById(id);
-        this.elementpos = this.element.getBoundingClientRect();
+
         this.margin = 15;
         this.width = this.element.width;
         this.height = this.element.height;
@@ -135,11 +135,11 @@ class Slider1d{
         let x,y;
 
         if(event.touches){
-            x = event.touches[0].clientX - this.elementpos.left;
-            y = event.touches[0].clientY - this.elementpos.top;
+            x = event.touches[0].clientX - this.element.getBoundingClientRect().left;
+            y = event.touches[0].clientY - this.element.getBoundingClientRect().top;
         }else{
-            x = event.clientX - this.elementpos.left;
-            y = event.clientY - this.elementpos.top;
+            x = event.clientX - this.element.getBoundingClientRect().left;
+            y = event.clientY - this.element.getBoundingClientRect().top;
         }
     
         if(this.mx!=-1 && this.my!=-1 && this.mouseIsPressed){
@@ -167,7 +167,6 @@ class SliderEn{
     constructor(id, func){
 
         this.element = document.getElementById(id);
-        this.elementpos = this.element.getBoundingClientRect();
         this.margin = 15;
         this.width = this.element.width;
         this.height = this.element.height;
@@ -212,12 +211,13 @@ class SliderEn{
 
         let x,y;
 
+
         if(event.touches){
-            x = event.touches[0].clientX - this.elementpos.left;
-            y = event.touches[0].clientY - this.elementpos.top;
+            x = event.touches[0].clientX - this.element.getBoundingClientRect().left;
+            y = event.touches[0].clientY - this.element.getBoundingClientRect().top;
         }else{
-            x = event.clientX - this.elementpos.left;
-            y = event.clientY - this.elementpos.top;
+            x = event.clientX - this.element.getBoundingClientRect().left;
+            y = event.clientY - this.element.getBoundingClientRect().top;
         }
 
         if(this.mx!=-1 && this.my!=-1 && this.mouseIsPressed){
