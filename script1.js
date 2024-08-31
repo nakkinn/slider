@@ -76,8 +76,10 @@ class Slider2d{
         drawline(this.id, this.px, this.margin, this.px, this.height-this.margin, "#0044ff");
         drawline(this.id, this.margin, this.py, this.height-this.margin, this.py, "#0044ff");
     
-        this.mx = x;
-        this.my = y;
+        if(this.mouseIsPressed){
+            this.mx = x;
+            this.my = y;
+        }
     }
 
 }
@@ -154,9 +156,10 @@ class Slider1d{
         drawline(this.id, this.margin, this.height/2, this.width-this.margin, this.height/2, "#0044ff", 1);
         drawline(this.id, this.margin, this.height/2, this.px, this.height/2, "#0044ff", 6);
 
-    
-        this.mx = x;
-        this.my = y;
+        if(this.mouseIsPressed){
+            this.mx = x;
+            this.my = y;
+        }
     }
 }
 
@@ -229,8 +232,10 @@ class SliderEn{
         drawcircle2(this.id, this.width/2, this.height/2, this.radius, "#0044ff");
         drawcircle(this.id, this.width/2 + this.radius*Math.cos(-this.value), this.height/2 + this.radius*Math.sin(-this.value), 10, "#0044ff");
 
-        this.mx = x;
-        this.my = y;
+        if(this.mouseIsPressed){
+            this.mx = x;
+            this.my = y;
+        }
     }
 
 
