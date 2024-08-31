@@ -104,10 +104,28 @@ class Slider1d{
         this.func = func;
 
 
-        drawbackground(id, "#eeeeee");
-        drawcircle(id, this.px, this.py, 10, "#0044ff");
-        drawline(id, this.margin, this.py, this.width-this.margin, this.py, "#0044ff", 1);
-        drawline(id, this.margin, this.py, this.px, this.py, "#0044ff", 6);
+        drawbackground(this.id, "#eeeeee");
+
+        drawcircle(this.id, this.px-1, this.py+3, 10, "#bbbbbb");
+
+        drawline(this.id, this.margin, this.py, this.width-this.margin, this.py, "#aaaaaa", 8);
+
+        drawline(this.id, this.margin, this.py, this.px, this.py, "#4466ff", 8);
+        
+        
+        
+        drawline(this.id, this.px, this.py+2, this.width-this.margin, this.py+2, "#777777", 3);
+        drawline(this.id, this.margin, this.py+2, this.px, this.py+2, "#0000ff", 3);    //線　ハイライト
+        drawline(this.id, this.margin-3, this.py-2, this.width-this.margin, this.py-2, "#cccccc", 1);
+
+        drawcircle(this.id, this.margin, this.py, 4, "#2233ff");
+        drawcircle(this.id, this.width-this.margin, this.py, 4, "#999999");
+        
+        drawcircle(this.id, this.px, this.py, 10, "#0000ff");
+        drawcircle(this.id, this.px+0.8, this.py-0.8, 8, "#0044ff");
+        drawcircle(this.id, this.px+1, this.py-1.8, 4.5, "#2266ff");
+
+        
 
 
         this.element.addEventListener("pointerdown",()=>{
@@ -152,10 +170,29 @@ class Slider1d{
         }
     
         drawbackground(this.id, "#eeeeee");
-        drawcircle(this.id, this.px, this.py, 10, "#0044ff");
-        drawline(this.id, this.margin, this.height/2, this.width-this.margin, this.height/2, "#0044ff", 1);
-        drawline(this.id, this.margin, this.height/2, this.px, this.height/2, "#0044ff", 6);
 
+        drawcircle(this.id, this.px-1, this.py+3, 10, "#bbbbbb");
+
+        drawline(this.id, this.margin, this.py, this.width-this.margin, this.py, "#aaaaaa", 8);
+
+        drawline(this.id, this.margin, this.py, this.px, this.py, "#4466ff", 8);
+        
+        
+        
+        drawline(this.id, this.px, this.py+2, this.width-this.margin, this.py+2, "#777777", 3);
+        drawline(this.id, this.margin, this.py+2, this.px, this.py+2, "#0000ff", 3);    //線　ハイライト
+        drawline(this.id, this.margin-3, this.py-2, this.width-this.margin, this.py-2, "#cccccc", 1);
+
+        drawcircle(this.id, this.margin, this.py, 4, "#2233ff");
+        drawcircle(this.id, this.width-this.margin, this.py, 4, "#999999");
+        
+        drawcircle(this.id, this.px, this.py, 10, "#0000ff");
+        drawcircle(this.id, this.px+0.8, this.py-0.8, 8, "#0044ff");
+        drawcircle(this.id, this.px+1, this.py-1.8, 4.5, "#2266ff");
+
+        
+
+        
         if(this.mouseIsPressed){
             this.mx = x;
             this.my = y;
